@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de la Culture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-amber-50 text-stone-800 font-sans min-h-screen flex flex-col justify-between p-4">
+
+  <header class="flex justify-between items-center bg-stone-800 text-white p-4 rounded-xl shadow-md">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Logo Café" class="w-10 h-10 object-contain rounded-full bg-white p-1" onerror="this.src='https://via.placeholder.com/40?text=☕'">
+      <h1 class="font-bold text-lg">Café de la Culture</h1>
+    </div>
+    <div id="userScore" class="bg-amber-600 px-3 py-1 rounded-full text-sm font-semibold">
+      0 pts
+    </div>
+  </header>
+
+  <div id="loginBlock" class="bg-white p-6 rounded-2xl shadow-lg border border-amber-100 max-w-md mx-auto w-full my-auto text-center space-y-4">
+    <h2 class="text-2xl font-bold text-stone-800">Rejoindre la partie</h2>
+    <input type="text" id="pseudoInput" placeholder="Ton Pseudo" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-amber-500">
+    <input type="text" id="codeInput" placeholder="Code unique (ex: 849201)" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-amber-500">
+    <button onclick="rejoindrePartie()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl shadow-md transition">
+      Entrer au Café ☕
+    </button>
+  </div>
+
+  <main id="gameBlock" class="hidden my-auto w-full max-w-md mx-auto space-y-4">
+    <div class="bg-white p-6 rounded-2xl shadow-lg border border-amber-100 text-center">
+      <p id="questionNum" class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-1">Question 1</p>
+      <h2 id="questionText" class="text-xl font-bold text-stone-800">En attente du lancement par le modérateur...</h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+      <button onclick="envoyerReponse(0)" class="bg-rose-500 hover:bg-rose-600 text-white font-bold py-6 rounded-xl shadow-md transition transform active:scale-95">
+        <span id="opt0">Option A</span>
+      </button>
+      <button onclick="envoyerReponse(1)" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-6 rounded-xl shadow-md transition transform active:scale-95">
+        <span id="opt1">Option B</span>
+      </button>
+      <button onclick="envoyerReponse(2)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-6 rounded-xl shadow-md transition transform active:scale-95">
+        <span id="opt2">Option C</span>
+      </button>
+      <button onclick="envoyerReponse(3)" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-6 rounded-xl shadow-md transition transform active:scale-95">
+        <span id="opt3">Option D</span>
+      </button>
+    </div>
+  </main>
+
+  <footer id="emojiBar" class="hidden bg-white p-3 rounded-2xl shadow-lg border border-amber-100 flex justify-around max-w-md mx-auto w-full">
+    <button onclick="envoyerEmoji('👏')" class="text-2xl hover:scale-125 transition">👏</button>
+    <button onclick="envoyerEmoji('🔥')" class="text-2xl hover:scale-125 transition">🔥</button>
+    <button onclick="envoyerEmoji('💡')" class="text-2xl hover:scale-125 transition">💡</button>
+    <button onclick="envoyerEmoji('😂')" class="text-2xl hover:scale-125 transition">😂</button>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de la Culture - Espace Modérateur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-900 text-white font-sans min-h-screen p-6 flex flex-col justify-between relative overflow-hidden">
+
+  <header class="flex justify-between items-center bg-stone-800 p-4 rounded-2xl border border-stone-700 shadow-xl">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1" onerror="this.src='https://via.placeholder.com/40?text=☕'">
+      <div>
+        <h1 class="font-bold text-xl text-amber-500">Café de la Culture</h1>
+        <p class="text-xs text-stone-400">Panneau de contrôle Direct</p>
+      </div>
+    </div>
+    
+    <div class="bg-amber-600 px-6 py-2 rounded-xl text-center shadow-lg">
+      <span class="text-xs uppercase tracking-widest text-amber-200 block">Code du Salon</span>
+      <span class="text-2xl font-black tracking-wider text-white">111111</span>
+    </div>
+  </header>
+
+  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+    
+    <section class="md:col-span-2 bg-stone-800 p-8 rounded-2xl border border-stone-700 shadow-xl space-y-6 flex flex-col justify-between relative">
+      
+      <div id="quizScreen" class="space-y-6 flex flex-col justify-between h-full">
+        <div class="flex justify-between items-center">
+          <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase">En direct</span>
+          <span class="text-stone-400 text-sm">Temps restant : <strong id="timerDisplay" class="text-amber-400 text-xl font-bold">--s</strong></span>
+        </div>
+
+        <h2 id="currentQuestion" class="text-2xl font-bold text-amber-100">
+          Clique sur "Question Suivante" pour démarrer le quiz !
+        </h2>
+
+        <div id="propositionsGrid" class="grid grid-cols-2 gap-4 pt-4">
+          <div class="bg-rose-900/40 border border-rose-500/40 p-4 rounded-xl text-rose-200 font-semibold text-lg flex items-center">
+            <span class="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center mr-3 text-sm font-bold">1</span>
+            <span id="modOpt0">---</span>
+          </div>
+          <div class="bg-sky-900/40 border border-sky-500/40 p-4 rounded-xl text-sky-200 font-semibold text-lg flex items-center">
+            <span class="w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center mr-3 text-sm font-bold">2</span>
+            <span id="modOpt1">---</span>
+          </div>
+          <div class="bg-amber-900/40 border border-amber-500/40 p-4 rounded-xl text-amber-200 font-semibold text-lg flex items-center">
+            <span class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center mr-3 text-sm font-bold">3</span>
+            <span id="modOpt2">---</span>
+          </div>
+          <div class="bg-emerald-900/40 border border-emerald-500/40 p-4 rounded-xl text-emerald-200 font-semibold text-lg flex items-center">
+            <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center mr-3 text-sm font-bold">4</span>
+            <span id="modOpt3">---</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="podiumScreen" class="hidden flex flex-col items-center justify-center space-y-6 py-6 text-center">
+        <h2 class="text-3xl font-black text-amber-400">🎉 FIN DU QUIZ ! 🎉</h2>
+        
+        <div id="podiumList" class="w-full space-y-3 my-4">
+          </div>
+
+        <button onclick="recommencerPartie()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition text-lg flex items-center gap-2">
+          🔄 Recommencer une Partie
+        </button>
+      </div>
+
+    </section>
+
+    <section class="bg-stone-800 p-6 rounded-2xl border border-stone-700 shadow-xl flex flex-col justify-between space-y-4">
+      <div>
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-bold text-lg text-amber-400">Joueurs Connectés</h3>
+          <span id="playerCount" class="bg-stone-700 text-xs px-2.5 py-1 rounded-full">0</span>
+        </div>
+
+        <ul id="playersList" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+        </ul>
+      </div>
+
+      <button id="btnNext" onclick="questionSuivante()" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 rounded-xl shadow-lg transition">
+        Question Suivante ➔
+      </button>
+    </section>
+
+  </main>
+
+  <div id="emojiContainer" class="fixed inset-0 pointer-events-none z-50"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    function questionSuivante() {
+      socket.emit('nextQuestion');
+    }
+
+    function recommencerPartie() {
+      // Masquer le podium et réafficher la zone de question
+      document.getElementById('podiumScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('hidden');
+      document.getElementById('btnNext').disabled = false;
+      document.getElementById('btnNext').classList.remove('opacity-50', 'cursor-not-allowed');
+
+      // Réinitialiser les visuels
+      document.getElementById('currentQuestion').innerText = 'Clique sur "Question Suivante" pour démarrer le quiz !';
+      document.getElementById('timerDisplay').innerText = '--s';
+      document.getElementById('modOpt0').innerText = '---';
+      document.getElementById('modOpt1').innerText = '---';
+      document.getElementById('modOpt2').innerText = '---';
+      document.getElementById('modOpt3').innerText = '---';
+
+      // Notifier le serveur si tu as un événement pour tout remettre à zéro
+      socket.emit('restartQuiz');
+    }
+
+    socket.on('tickTimer', (temps) => {
+      document.getElementById('timerDisplay').innerText = temps + 's';
+    });
+
+    // Affichage dynamique de la question ET des 4 réponses
+    socket.on('nouvelleQuestion', (q) => {
+      // S'assurer que l'écran de question est affiché
+      document.getElementById('podiumScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('hidden');
+
+      document.getElementById('currentQuestion').innerText = `Question ${q.id}/${q.totalQuestions} : ${q.question}`;
+      
+      document.getElementById('modOpt0').innerText = q.propositions[0] || '---';
+      document.getElementById('modOpt1').innerText = q.propositions[1] || '---';
+      document.getElementById('modOpt2').innerText = q.propositions[2] || '---';
+      document.getElementById('modOpt3').innerText = q.propositions[3] || '---';
+    });
+
+    // Gestion propre de la fin du quiz sans alerte
+    socket.on('finDePartie', (classement) => {
+      document.getElementById('quizScreen').classList.add('hidden');
+      document.getElementById('podiumScreen').classList.remove('hidden');
+      
+      // Désactiver le bouton "Question Suivante" pendant la fin
+      document.getElementById('btnNext').disabled = true;
+      document.getElementById('btnNext').classList.add('opacity-50', 'cursor-not-allowed');
+
+      const podiumList = document.getElementById('podiumList');
+      podiumList.innerHTML = '';
+
+      const top3 = classement.slice(0, 3);
+      const medailles = ['🥇', '🥈', '🥉'];
+      const couleurs = [
+        'bg-amber-500/20 border-amber-500 text-amber-300',
+        'bg-stone-500/20 border-stone-400 text-stone-200',
+        'bg-amber-800/20 border-amber-700 text-amber-500'
+      ];
+
+      if (top3.length === 0) {
+        podiumList.innerHTML = `<p class="text-stone-400">Aucun joueur dans le classement.</p>`;
+      } else {
+        top3.forEach((j, idx) => {
+          const div = document.createElement('div');
+          div.className = `p-4 rounded-xl border flex justify-between items-center text-lg font-bold ${couleurs[idx] || 'bg-stone-700 border-stone-600'}`;
+          div.innerHTML = `
+            <span>${medailles[idx] || (idx + 1) + '.'} ${j.pseudo}</span>
+            <span class="text-xl">${j.score} pts</span>
+          `;
+          podiumList.appendChild(div);
+        });
+      }
+    });
+
+    socket.on('newEmoji', ({ emoji }) => {
+      const el = document.createElement('div');
+      el.innerText = emoji;
+      el.className = 'emoji-volant';
+      el.style.left = Math.random() * 85 + 5 + '%';
+      el.style.bottom = '40px';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 2000);
+    });
+
+    socket.on('updateJoueursList', (joueurs) => {
+      const list = document.getElementById('playersList');
+      document.getElementById('playerCount').innerText = joueurs.length;
+      list.innerHTML = '';
+      joueurs.forEach(j => {
+        const li = document.createElement('li');
+        li.className = "flex justify-between items-center bg-stone-700/50 p-2.5 rounded-lg text-sm";
+        li.innerHTML = `
+          <span>${j.pseudo} (${j.score} pts)</span>
+          <button onclick="socket.emit('blockPlayer', '${j.id}')" class="text-xs bg-rose-600 px-2 py-1 rounded">Bloquer ❌</button>
+        `;
+        list.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>

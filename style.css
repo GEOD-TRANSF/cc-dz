@@ -1,0 +1,26 @@
+/* Style personnalisé et animations pour Café de la Culture */
+
+/* Animation de l'émoji qui monte et disparaît en direct */
+@keyframes monterEtDisparaitre {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-300px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Classe appliquée dynamiquement aux émojis volants */
+.emoji-volant {
+  position: fixed;
+  font-size: 2.5rem;
+  pointer-events: none;
+  z-index: 50;
+  animation: monterEtDisparaitre 2s ease-out forwards;
+}

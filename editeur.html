@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Éditeur de Questions - Café de la Culture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-50 text-stone-800 p-6 min-h-screen">
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded-2xl shadow-xl space-y-6">
+    <div class="flex items-center justify-between border-b pb-4">
+      <h1 class="text-2xl font-bold text-amber-700">✍️ Éditeur de Questions</h1>
+      <a href="/admin" class="text-sm bg-stone-800 text-white px-3 py-1.5 rounded-lg">Aller au Direct ➔</a>
+    </div>
+
+    <form id="questionForm" class="space-y-4 bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+      <input type="hidden" id="editId" value="">
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">Intitulé de la Question</label>
+        <input type="text" id="questionText" required placeholder="Ex: Quel est le plus grand océan ?" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">Temps imparti (en secondes)</label>
+        <input type="number" id="tempsLimiteSec" value="15" min="5" max="60" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+      <p class="text-sm font-semibold">Propositions (Coche la case de la BONNE réponse) :</p>
+      
+      <div class="space-y-2">
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="reponseCorrecte" value="0" checked class="w-5 h-5 text-amber-600">
+          <input type="text" id="prop0" required placeholder="Option 1" class="w-full p-2.5 border rounded-lg">
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="reponseCorrecte" value="1" class="w-5 h-5 text-amber-600">
+          <input type="text" id="prop1" required placeholder="Option 2" class="w-full p-2.5 border rounded-lg">
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="reponseCorrecte" value="2" class="w-5 h-5 text-amber-600">
+          <input type="text" id="prop2" required placeholder="Option 3" class="w-full p-2.5 border rounded-lg">
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="reponseCorrecte" value="3" class="w-5 h-5 text-amber-600">
+          <input type="text" id="prop3" required placeholder="Option 4" class="w-full p-2.5 border rounded-lg">
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <button type="submit" id="btnSubmit" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl transition">
+          ➕ Ajouter cette question
+        </button>
+        <button type="button" id="btnCancel" onclick="annulerEdition()" class="hidden bg-stone-400 hover:bg-stone-500 text-white font-bold px-4 rounded-xl transition">
+          Annuler
+        </button>
+      </div>
+    </form>
+
+    <hr>
+
+    <div>
+      <h2 class="font-bold text-lg mb-2">Questions enregistrées (<span id="totalQ">0</span>)</h2>
+      <ul id="questionsList" class="space-y-3 max-h-80 overflow-y-auto pr-1"></ul>
+    </div>
+  </div>
+
+  <script>
+    let questionsCache = [];
+
+    async function chargerQuestions() {
+      const res = await fetch('/api/questions');
+      questionsCache = await res.json();
+      document.getElementById('totalQ').innerText = questionsCache.length;
+      const list = document.getElementById('questionsList');
+      list.innerHTML = '';
+      
+      questionsCache.forEach((q, i) => {
+        const li = document.createElement('li');
+        li.className = "p-3 bg-stone-100 rounded-xl text-sm flex justify-between items-center gap-2 shadow-sm border";
+        li.innerHTML = `
+          <div class="flex-1">
+            <strong>Q${i+1}:</strong> ${q.question} 
+            <span class="text-xs text-amber-600 font-bold">(${q.tempsLimiteSec}s)</span>
+            <div class="text-xs text-stone-500 mt-1">Réponse correcte: <span class="font-semibold text-emerald-700">${q.propositions[q.reponseCorrecte]}</span></div>
+          </div>
+          <div class="flex gap-1">
+            <button onclick="preparerModification('${q.id}')" class="bg-sky-600 hover:bg-sky-700 text-white text-xs px-2.5 py-1.5 rounded-lg">✏️ Modif.</button>
+            <button onclick="supprimerQuestion('${q.id}')" class="bg-rose-600 hover:bg-rose-700 text-white text-xs px-2.5 py-1.5 rounded-lg">🗑️ Suppr.</button>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    document.getElementById('questionForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const editId = document.getElementById('editId').value;
+      const reponseCorrecte = parseInt(document.querySelector('input[name="reponseCorrecte"]:checked').value);
+      
+      const payload = {
+        question: document.getElementById('questionText').value,
+        tempsLimiteSec: parseInt(document.getElementById('tempsLimiteSec').value),
+        propositions: [
+          document.getElementById('prop0').value,
+          document.getElementById('prop1').value,
+          document.getElementById('prop2').value,
+          document.getElementById('prop3').value
+        ],
+        reponseCorrecte
+      };
+
+      if (editId) {
+        // Mode Modification
+        await fetch(`/api/questions/${editId}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } else {
+        // Mode Ajout
+        await fetch('/api/questions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+
+      annulerEdition();
+      chargerQuestions();
+    });
+
+    function preparerModification(id) {
+      const q = questionsCache.find(item => String(item.id) === String(id));
+      if (!q) return;
+
+      document.getElementById('editId').value = q.id;
+      document.getElementById('questionText').value = q.question;
+      document.getElementById('tempsLimiteSec').value = q.tempsLimiteSec;
+      document.getElementById('prop0').value = q.propositions[0];
+      document.getElementById('prop1').value = q.propositions[1];
+      document.getElementById('prop2').value = q.propositions[2];
+      document.getElementById('prop3').value = q.propositions[3];
+
+      const radios = document.querySelectorAll('input[name="reponseCorrecte"]');
+      radios[q.reponseCorrecte].checked = true;
+
+      document.getElementById('btnSubmit').innerText = "💾 Enregistrer les modifications";
+      document.getElementById('btnCancel').classList.remove('hidden');
+    }
+
+    function annulerEdition() {
+      document.getElementById('editId').value = "";
+      document.getElementById('questionForm').reset();
+      document.getElementById('btnSubmit').innerText = "➕ Ajouter cette question";
+      document.getElementById('btnCancel').classList.add('hidden');
+    }
+
+    async function supprimerQuestion(id) {
+      if (confirm('Voulez-vous vraiment supprimer cette question ?')) {
+        await fetch(`/api/questions/${id}`, { method: 'DELETE' });
+        chargerQuestions();
+      }
+    }
+
+    chargerQuestions();
+  </script>
+</body>
+</html>
