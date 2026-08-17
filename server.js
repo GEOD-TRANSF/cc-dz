@@ -72,7 +72,7 @@ app.put('/api/questions/:id', (req, res) => {
 // --- ÉTAT GLOBAL DU JEU ET SOCKET.IO ---
 
 let gameState = {
-  roomCode: "111111",
+  roomCode: "123",
   joueurs: {},
   questionIndex: -1,
   tempsRestant: 0,
