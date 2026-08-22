@@ -1,241 +1,241 @@
 [
   {
     "id": 1786554744354,
-    "question": "في عام 1494، قامت إسبانيا والبرتغال بتقسيم مناطق النفوذ الاستعماري خارج أوروبا بموجب معاهدة توردسيلاس. ما العامل الجغرافي الذي استُخدم أساسًا لرسم خط التقسيم؟",
+    "question": "En quelle année est survenue la chute de l'Empire romain d'Occident ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "خط غرينتش",
-      "مدار السرطان",
-      "خط الاستواء",
-      " خط طول جغرافي (مريديان) وُضع في المحيط الأطلسي."
+      "395",
+      "1053",
+      "811",
+      "476"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786554834900,
-    "question": "أي من الأحداث التالية وقع أولًا؟",
+    "question": "Dans la mythologie grecque, qui est le roi des dieux et le maître du ciel ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "سقوط القسطنطينية",
-      "اغتيال يوليوس قيصر",
-      "سقوط الإمبراطورية الرومانية الغربية",
-      "تتويج شارلمان إمبراطورًا"
+      "Poséidon",
+      "Zeus",
+      "Hadès",
+      "Arès"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786563579581,
-    "question": "أي ترتيب زمني مما يلي صحيح؟",
+    "question": "Quelle est la capitale de la Mongolie ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "العباسيون ← الأمويون ← الفاطميون",
-      "الأمويون ← العباسيون ← الفاطميون",
-      "الفاطميون ← الأمويون ← العباسيون",
-      "الأمويون ← الفاطميون ← العباسيون"
+      "Astana",
+      "Oulan-Bator",
+      "Tachkent",
+      "Katmandou"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786564582525,
-    "question": "الإمبراطور نابليون بونابرت توفي في جزيرة سانت هيلانة. فما الدولة التي كانت تسيطر على الجزيرة وقت وفاته؟",
+    "question": "Quelle est la vitesse approximative de la lumière dans le vide ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "فرنسا",
-      " إسبانيا",
-      "البرتغال",
-      " بريطانيا"
+      "150 000 km/s",
+      " 1 000 000 km/s",
+      "30 000 km/s",
+      "300 000 km/s"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786564676813,
-    "question": "أي من الحضارات التالية استخدمت الكتابة المسمارية في مراحل مبكرة من تاريخها؟",
+    "question": "Quelle est la plus petite unité structurelle et fonctionnelle du vivant ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      " السومريون",
-      " الإغريق",
-      "الرومان",
-      "المايا"
+      " La cellule",
+      " L'organe",
+      "La molécule",
+      "L'atome"
     ],
     "reponseCorrecte": 0
   },
   {
     "id": 1786564837075,
-    "question": "رجل يقف داخل مصعد. إذا كان المصعد يتحرك بسرعة ثابتة في خط مستقيم، فما وضع القوة المحصلة المؤثرة على الرجل؟",
-    "tempsLimiteSec": 20,
+    "question": "Quelle grande civilisation antique a bâti les cités-états de Tikal, Palenque et Chichén Itzá ?",
+    "tempsLimiteSec": 15,
     "propositions": [
-      "أكبر من صفر إلى أعلى",
-      "أكبر من صفر إلى أسفل",
-      "تساوي صفرًا",
-      "تتغير باستمرار"
+      "Les Incas",
+      "Les Aztèques",
+      "Les Mayas",
+      "Les Olmèques"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786564934829,
-    "question": "وفقًا للنسبية الخاصة، أي عبارة أدق؟",
+    "question": "Quelle écriture ancienne a été développée en Mésopotamie vers 3400 av. J.-C. ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      " الزمن مطلق لجميع المراقبين",
-      "الطول لا يتغير أبدًا مع السرعة",
-      "قياسات الزمن والمسافة يمكن أن تختلف بين المراقبين بحسب حالتهم الحركية",
-      "الكتلة لا علاقة لها بالطاقة"
+      "Les hiéroglyphes",
+      "L'alphabet phénicien",
+      "L'écriture cunéiforme",
+      "Le linéaire"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786565040211,
-    "question": "عنصر يحتوي في ذرته المتعادلة على 17 إلكترونًا. ما العنصر؟",
+    "question": "Qui était le roi de France surnommé \"Le Roi-Soleil\" ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "الأكسجين",
-      "الكلور",
-      "الأرجون",
-      "البوتاسيوم"
+      "Louis XVI",
+      "Louis XIV",
+      "François Ier",
+      "Henri IV"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786565136205,
-    "question": "رصد عالم فلك نجمًا يتحرك طيفه نحو الأطوال الموجية الأقصر، أي نحو الطرف الأزرق من الطيف. ماذا يمكن أن يشير ذلك غالبًا؟",
+    "question": "En quelle année est tombé le mur de Berlin ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "النجم يبتعد عن الراصد",
-      "النجم يقترب من الراصد",
-      "النجم توقف عن الحركة",
-      "النجم أصبح أبرد بالضرورة"
+      "1990",
+      "1989",
+      "1991",
+      "1988"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786813809828,
-    "question": "أي عبارة عن DNA أكثر دقة؟",
+    "question": "Dans la mythologie nordique, quel dieu possède un marteau magique nommé Mjöllnir ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "جميع الكائنات الحية تمتلك DNA داخل نواة",
-      "DNA هو البروتين الأساسي المسؤول عن بناء الخلية",
-      "DNA يخزن المعلومات الوراثية في معظم الكائنات الحية",
-      "DNA يوجد فقط في خلايا الحيوانات"
+      "Loki",
+      "Odin",
+      "Thor",
+      "Freyr"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786813903244,
-    "question": "أي دولة من الدول التالية لا تمتلك منفذًا مباشرًا إلى البحر المتوسط؟",
+    "question": "Quel est le nom du dieu égyptien de la momification et de la mort, à tête de chacal ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "سوريا",
-      "لبنان",
-      "الأردن",
-      "تركيا"
+      "Horus",
+      "Thot",
+      "Anubis",
+      "Osiris"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786814081293,
-    "question": "أي دولة من الآتي تمتلك حدودًا برية مع فرنسا بسبب إقليم فرنسي يقع في أمريكا الجنوبية؟",
+    "question": "Dans quel pays se trouve le mont Kilimandjaro ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "كولومبيا",
-      "المكسيك",
-      "البرازيل",
-      "تشيلي"
+      "Le Kenya",
+      "L'Éthiopie",
+      "La Tanzanie",
+      "L'Ouganda"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786814140085,
-    "question": "أين يقع المقر الرسمي لمحتكمة العدل الدولية (ICJ)؟",
+    "question": "Quel organe du corps humain produit la bile ?",
     "tempsLimiteSec": 10,
     "propositions": [
-      "نيويورك",
-      "جنيف",
-      " بروكسل",
-      "لاهاي"
+      "L'estomac",
+      "Le pancréas",
+      " La rate",
+      "Le foie"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786814359959,
-    "question": "عندما يكون القطب الشمالي في حالة صيف فلكي، تكون منطقة القطب الجنوبي في:",
-    "tempsLimiteSec": 15,
+    "question": "Quelle planète du système solaire est surnommée la \"planète rouge\" ?",
+    "tempsLimiteSec": 10,
     "propositions": [
-      "اعتدال دائم",
-      "شتاء فلكي",
-      "لا علاقة بينهما",
-      "صيف فلكي أيضًا"
+      "Vénus",
+      "Mars",
+      "Jupiter",
+      "Mercure"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786814418699,
-    "question": "أي نهر من الآتي يصب في البحر الأسود؟",
+    "question": "Quelle célèbre cité Inca est perchée dans les Andes péruviennes ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "الدانوب",
-      "الراين",
-      "ج) السين",
-      "الفولغا"
+      "Machu Picchu",
+      "Cuzco",
+      "Teotihuacan",
+      "Tenochtitlan"
     ],
     "reponseCorrecte": 0
   },
   {
     "id": 1786814526516,
-    "question": "من صاحب كتاب «رسالة الغفران»؟",
+    "question": "Quel empire antique s'étendait sur un vaste territoire sous le règne de Cyrus le Grand ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "الجاحظ",
-      "ابن المقفع",
-      "المتنبي",
-      "أبو العلاء المعري"
+      "L'Empire ottoman",
+      "L'Empire romain",
+      "L'Empire byzantin",
+      "L'Empire perse"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786814655493,
-    "question": "أي عبارة ترتبط مباشرة بالفيلسوف رينيه ديكارت؟",
+    "question": "Quelle structure monumentale a été construite sous la dynastie Qin pour protéger la Chine des invasions du nord ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "الفضيلة هي المعرفة",
-      "أنا أفكر، إذن أنا موجود",
-      "الإنسان ذئب للإنسان",
-      "أعرف أنني لا أعرف"
+      "La Cité interdite",
+      "L'Armée de terre cuite",
+      "La Pagode de l'Oie sauvage",
+      "La Grande Muraille de Chine"
     ],
-    "reponseCorrecte": 1
+    "reponseCorrecte": 3
   },
   {
     "id": 1786814839737,
-    "question": "من مؤلف رواية «دون كيشوت»؟",
-    "tempsLimiteSec": 15,
+    "question": "Dans la mythologie grecque, qui a accompli les 12 travaux ?",
+    "tempsLimiteSec": 10,
     "propositions": [
-      "غوته",
-      "دوستويفسكي",
-      "فيكتور هوغو",
-      "ميغيل دي ثربانتس"
+      "Thésée",
+      "Achille",
+      "Perseus",
+      "Héraclès (Hercule)"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786814909950,
-    "question": "أي من الأعمال التالية ليست رواية؟",
+    "question": "Quel équivalent romain correspond à la déesse grecque de l'amour, Aphrodite ?",
     "tempsLimiteSec": 20,
     "propositions": [
-      "الإخوة كارامازوف",
-      "الكوميديا الإلهية",
-      "مئة عام من العزلة",
-      "البؤساء"
+      "Junon",
+      "Vénus",
+      "Diane",
+      "Minerve"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786815137997,
-    "question": "كم عدد الأعضاء الدائمين في مجلس الأمن التابع للأمم المتحدة؟  أ) 3",
+    "question": "Dans la mythologie grecque, qui s'est envolé trop près du soleil avec des ailes en cire ?",
     "tempsLimiteSec": 10,
     "propositions": [
-      "7",
-      "3",
-      "5",
-      "11"
+      "Dédale",
+      "Bellerophon",
+      "Icare",
+      "Phaéton"
     ],
     "reponseCorrecte": 2
   }
