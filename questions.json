@@ -1,241 +1,241 @@
 [
   {
     "id": 1786554744354,
-    "question": "En quelle année est survenue la chute de l'Empire romain d'Occident ?",
+    "question": " ما الدولة ا التي ا تقع عند تقاطع خط الاستواء مع خط غرينتش؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "395",
-      "1053",
-      "811",
-      "476"
+      " الغابون",
+      "غانا",
+      " لا توجد دولة",
+      " توغو"
     ],
-    "reponseCorrecte": 3
+    "reponseCorrecte": 2
   },
   {
     "id": 1786554834900,
-    "question": "Dans la mythologie grecque, qui est le roi des dieux et le maître du ciel ?",
+    "question": " ما الجسيم الذي يُعدّ حاملاً للقوة الكهرومغناطيسية؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Poséidon",
-      "Zeus",
-      "Hadès",
-      "Arès"
+      "الفوتون",
+      " الغلوون",
+      "بوزون ",
+      "النيوترينو"
     ],
-    "reponseCorrecte": 1
+    "reponseCorrecte": 0
   },
   {
     "id": 1786563579581,
-    "question": "Quelle est la capitale de la Mongolie ?",
+    "question": " كم عدداً أولياً يوجد بين العددين 20 و40؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Astana",
-      "Oulan-Bator",
-      "Tachkent",
-      "Katmandou"
+      "2",
+      "1",
+      "4",
+      "3"
     ],
-    "reponseCorrecte": 1
+    "reponseCorrecte": 2
   },
   {
     "id": 1786564582525,
-    "question": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+    "question": " ما الإمبراطورية التي كانت عاصمتها مدينة تينوختيتلان؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "150 000 km/s",
-      " 1 000 000 km/s",
-      "30 000 km/s",
-      "300 000 km/s"
+      " المايا",
+      "الإنكا",
+      " الأولمك",
+      "الأزتك"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786564676813,
-    "question": "Quelle est la plus petite unité structurelle et fonctionnelle du vivant ?",
+    "question": "أي عنصر كيميائي يحمل العدد الذري 79؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      " La cellule",
-      " L'organe",
-      "La molécule",
-      "L'atome"
+      "الفضة",
+      "  الذهب",
+      " البلاتين",
+      " الزئبق"
     ],
-    "reponseCorrecte": 0
+    "reponseCorrecte": 1
   },
   {
     "id": 1786564837075,
-    "question": "Quelle grande civilisation antique a bâti les cités-états de Tikal, Palenque et Chichén Itzá ?",
-    "tempsLimiteSec": 15,
+    "question": "ما المعنى الأقرب لكلمة «مُسهب»؟",
+    "tempsLimiteSec": 20,
     "propositions": [
-      "Les Incas",
-      "Les Aztèques",
-      "Les Mayas",
-      "Les Olmèques"
+      "شديد الدقة",
+      " قليل الخيال",
+      "كثير الكلام والتفصيل",
+      "غامض المعنى"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786564934829,
-    "question": "Quelle écriture ancienne a été développée en Mésopotamie vers 3400 av. J.-C. ?",
+    "question": " في أي رواية يظهر البطل راسكولنيكوف؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Les hiéroglyphes",
-      "L'alphabet phénicien",
-      "L'écriture cunéiforme",
-      "Le linéaire"
+      " الإخوة كارامازوف",
+      "الجريمة والعقاب",
+      "الأبله",
+      "آنا كارنينا"
     ],
-    "reponseCorrecte": 2
+    "reponseCorrecte": 1
   },
   {
     "id": 1786565040211,
-    "question": "Qui était le roi de France surnommé \"Le Roi-Soleil\" ?",
+    "question": "ما الوثيقة التي وُقّعت سنة 1215 وحدّت بشكل مهم من سلطة ملك إنجلترا؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Louis XVI",
-      "Louis XIV",
-      "François Ier",
-      "Henri IV"
+      " عريضة الحقوق",
+      " قانون المثول أمام القضاء",
+      " وثيقة الحقوق",
+      " الماغنا كارتا"
     ],
-    "reponseCorrecte": 1
+    "reponseCorrecte": 3
   },
   {
     "id": 1786565136205,
-    "question": "En quelle année est tombé le mur de Berlin ?",
+    "question": "ما العاصمة الدستورية لبوليفيا؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "1990",
-      "1989",
-      "1991",
-      "1988"
+      " كوتشابامبا",
+      " سانتا كروز",
+      " لاباز",
+      " سوكري"
+    ],
+    "reponseCorrecte": 3
+  },
+  {
+    "id": 1786813809828,
+    "question": " وفقاً للنسبية الخاصة، ماذا يحدث لكتلة الجسم عندما تقترب سرعته من سرعة الضوء؟",
+    "tempsLimiteSec": 25,
+    "propositions": [
+      " الكتلة السكونية تبقى ثابتة، بينما تزداد الطاقة والزخم",
+      "تصبح صفراً",
+      "تنخفض حتى تختفي",
+      "تصبح سالبة"
+    ],
+    "reponseCorrecte": 0
+  },
+  {
+    "id": 1786813903244,
+    "question": "ما الفرق الأساسي بين النجم والكوكب؟",
+    "tempsLimiteSec": 20,
+    "propositions": [
+      " الكوكب أصغر دائماً من النجم",
+      " النجم ينتج الطاقة ذاتياً من خلال الاندماج النووي في داخله",
+      " الكوكب لا يمتلك غلافاً جوياً",
+      " النجم يمتلك دائماً حلقات"
     ],
     "reponseCorrecte": 1
   },
   {
-    "id": 1786813809828,
-    "question": "Dans la mythologie nordique, quel dieu possède un marteau magique nommé Mjöllnir ?",
-    "tempsLimiteSec": 20,
-    "propositions": [
-      "Loki",
-      "Odin",
-      "Thor",
-      "Freyr"
-    ],
-    "reponseCorrecte": 2
-  },
-  {
-    "id": 1786813903244,
-    "question": "Quel est le nom du dieu égyptien de la momification et de la mort, à tête de chacal ?",
-    "tempsLimiteSec": 20,
-    "propositions": [
-      "Horus",
-      "Thot",
-      "Anubis",
-      "Osiris"
-    ],
-    "reponseCorrecte": 2
-  },
-  {
     "id": 1786814081293,
-    "question": "Dans quel pays se trouve le mont Kilimandjaro ?",
+    "question": "من القائد الجزائري الذي قاد مقاومة كبيرة ضد الاحتلال الفرنسي في القرن التاسع",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Le Kenya",
-      "L'Éthiopie",
-      "La Tanzanie",
-      "L'Ouganda"
+      " أحمد باي",
+      " يوغرطة",
+      "الأمير عبد القادر",
+      " ماسينيسا"
     ],
     "reponseCorrecte": 2
   },
   {
     "id": 1786814140085,
-    "question": "Quel organe du corps humain produit la bile ?",
-    "tempsLimiteSec": 10,
+    "question": "(Phèdre) عام 1677 من هو الكاتب الكلاسيكي الذي ألّف مسرحية \"فيدر\" ",
+    "tempsLimiteSec": 20,
     "propositions": [
-      "L'estomac",
-      "Le pancréas",
-      " La rate",
-      "Le foie"
+      " موليير",
+      "بيير كورني",
+      " جان راسين",
+      " فولتير"
     ],
-    "reponseCorrecte": 3
+    "reponseCorrecte": 2
   },
   {
     "id": 1786814359959,
-    "question": "Quelle planète du système solaire est surnommée la \"planète rouge\" ?",
-    "tempsLimiteSec": 10,
+    "question": " ما المفهوم المحوري في العمل الرئيسي للفيلسوف جان بول سارتر \"الوجود والعدم\"؟",
+    "tempsLimiteSec": 20,
     "propositions": [
-      "Vénus",
-      "Mars",
-      "Jupiter",
-      "Mercure"
+      " الرواقية",
+      "الوجودية",
+      " المثالية المفارقة",
+      "البراغماتية"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786814418699,
-    "question": "Quelle célèbre cité Inca est perchée dans les Andes péruviennes ?",
+    "question": " ما أطول نهر في إيطاليا والذي يعبر السهل الذي يحمل الاسم نفسه حتى البحر أدرياتيكي؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Machu Picchu",
-      "Cuzco",
-      "Teotihuacan",
-      "Tenochtitlan"
+      "بو",
+      " آرنو",
+      " التيبر",
+      " أديجي"
     ],
     "reponseCorrecte": 0
   },
   {
     "id": 1786814526516,
-    "question": "Quel empire antique s'étendait sur un vaste territoire sous le règne de Cyrus le Grand ?",
+    "question": "ما الفيلم الذي أخرجه كوينتن تارانتينو وفاز بالسعفة الذهبية في مهرجان كان عام 1994؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "L'Empire ottoman",
-      "L'Empire romain",
-      "L'Empire byzantin",
-      "L'Empire perse"
+      " Jackie Brown",
+      "Reservoir Dogs",
+      "Kill Bill",
+      "Pulp Fiction"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786814655493,
-    "question": "Quelle structure monumentale a été construite sous la dynastie Qin pour protéger la Chine des invasions du nord ?",
+    "question": " ما الكائنة أو الشخصية الأسطورية التي تمتلك مائة عين لا تنام جميعها في وقت واحد؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "La Cité interdite",
-      "L'Armée de terre cuite",
-      "La Pagode de l'Oie sauvage",
-      "La Grande Muraille de Chine"
+      " المينوتور",
+      " أرغوس",
+      "سيربيروس",
+      " تايفون"
     ],
-    "reponseCorrecte": 3
+    "reponseCorrecte": 1
   },
   {
     "id": 1786814839737,
-    "question": "Dans la mythologie grecque, qui a accompli les 12 travaux ?",
-    "tempsLimiteSec": 10,
+    "question": "من الإمبراطور الذي أصدر مرسوم ميلانو عام 313 م الذي منح الحرية الدينية للمسيحيين؟",
+    "tempsLimiteSec": 20,
     "propositions": [
-      "Thésée",
-      "Achille",
-      "Perseus",
-      "Héraclès (Hercule)"
+      " نيرون",
+      " أوجستس",
+      "تراجان",
+      " قسطنطين الأول"
     ],
     "reponseCorrecte": 3
   },
   {
     "id": 1786814909950,
-    "question": "Quel équivalent romain correspond à la déesse grecque de l'amour, Aphrodite ?",
+    "question": " ما المجرة الحلزونية الكبرى الأقرب إلى مجرتنا (درب التبانة)؟",
     "tempsLimiteSec": 20,
     "propositions": [
-      "Junon",
-      "Vénus",
-      "Diane",
-      "Minerve"
+      " مجرة الدوامة",
+      " مجرة أندروميدا",
+      " مجرة سومبريرو",
+      " مجرة المثلث"
     ],
     "reponseCorrecte": 1
   },
   {
     "id": 1786815137997,
-    "question": "Dans la mythologie grecque, qui s'est envolé trop près du soleil avec des ailes en cire ?",
-    "tempsLimiteSec": 10,
+    "question": " قطار كهربائي يسير بسرعة 100 كم/ساعة باتجاه الشمال، والرياح تهب باتجاه الجنوب بسرعة 50 كم/ساعة. في أي اتجاه يتصاعد دخان القطار؟",
+    "tempsLimiteSec": 20,
     "propositions": [
-      "Dédale",
-      "Bellerophon",
-      "Icare",
-      "Phaéton"
+      " إلى الأعلى مباشرة",
+      " نحو الجنوب",
+      " لا يوجد دخان، لأن القطار كهربائي",
+      " نحو الجنوب"
     ],
     "reponseCorrecte": 2
   }
